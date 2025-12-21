@@ -1,0 +1,10 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.5);
+}
+.navList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
