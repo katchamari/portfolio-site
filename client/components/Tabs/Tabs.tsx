@@ -24,8 +24,11 @@ export default function Tabs({ navItems, pageName }: Props) {
   });
 
   useEffect(() => {
-    router.push(tabData.activeTab as string);
-  }, [tabData.activeTab, router]);
+    async function redirect() {
+      router.push(tabData.activeTab as string);
+    }
+    redirect();
+  }, [tabData.activeTab]);
 
   const navItem = (className: string, i: number, content: ReactNode) => {
     const itemClasses = [styles.navItem, className];
