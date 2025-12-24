@@ -1,47 +1,104 @@
-import Link from "next/link";
+import { Fragment } from "react/jsx-runtime";
+import PillSections from "../PillSections/PillSections";
+import Tags from "../Tags/Tags";
+import styles from "./AboutSection.module.css";
 export default function AboutSection() {
+  const currentYear = parseInt(
+    new Date().toLocaleDateString("en-US", {
+      timeZone: "America/Los_Angeles",
+      year: "numeric",
+    }),
+  );
+  const yearsOfExperience = currentYear - 2019;
   return (
     <section>
       <h2>About me</h2>
       <p>
         I&apos;m Momo, but you can also call me Momie! (he/they) I&apos;m a web
-        developer and artist based in California. I&apos;m fully capable of full
-        stack programming, but my passion is in front end. I&apos;ve been
-        working professionally in web development for over 6 years now, and was
-        unfortunately forced to resign at my previous employment because none of
-        the employees were being paid for two months. I&apos;m seeking freelance
-        work in order to make ends meet until I can find a more permanent
-        position again.
+        developer and artist based in California. I&apos;m a full stack
+        developer with a passion and strength for front end. In my most recent
+        position, I worked full time as a senior full stack developer, but was
+        forced to resign after my employer failed to pay their employees for
+        over two months. I am looking for freelance work while I hunt for a more
+        permanent position.
       </p>
 
-      <h2>My Hobbies</h2>
+      <h2>My qualifications</h2>
       <p>
-        In my spare time, I enjoy spending time with my husband, drawing, coding
-        fun projects, learning languages, video games, anime and manga, and
-        spending quality time with friends! I am currently learning Spanish so I
-        can communicate better with my husband&apos;s family, and Japanese
-        because that&apos;s my own background.
+        In May 2020, I graduated from American River College with a degree in
+        Art New Media, with an emphasis on web design and development. In tandem
+        I studied independently through online courses, and interned at a local
+        design company as a front end developer. In June 2020, I started my
+        first job in the field. I have been working professionally as a
+        programmer for {yearsOfExperience} years since my internship.
       </p>
-
-      <h2>My Favorites</h2>
-      <p>
-        My favorite food is curry udon, and it&apos;s probably also my favorite
-        thing to cook because it happens to be super easy.{" "}
-        <Link href="https://www.justonecookbook.com/curry-udon/">
-          Here is the recipe I use.
-        </Link>
-      </p>
-      <p>
-        My favorite video game of all time is a Capcom game for the Nintendo DS
-        called Ghost Trick. It&apos;s created by the same person who created the
-        Ace Attorney series, which I also love.
-      </p>
-      <p>
-        My favorite anime and manga of all time are Dungeon Meshi and Mob Psycho
-        100. I have read the manga and watched the anime for both, and I collect
-        merch and figures.
-      </p>
-      <p>My favorite musicians/bands are Masayuki Suzuki and ALI.</p>
+      <div className={styles.skills}>
+        <div>
+          <h2>My skills</h2>
+          <p>
+            In {yearsOfExperience} years of working in the industry, I&apos;ve
+            gained a large skillset!
+          </p>
+        </div>
+        <PillSections
+          sections={[
+            {
+              title: "Technical Skills",
+              section: (
+                <Fragment>
+                  <Tags
+                    tags={[
+                      "HTML",
+                      "CSS",
+                      "SASS/SCSS",
+                      "JavaScript",
+                      "jQuery",
+                      "Bootstrap",
+                      "Bulma CSS",
+                      "ReactJS",
+                      "NextJS",
+                      "TypeScript",
+                      "Wordpress",
+                      "NodeJS",
+                      "Express",
+                      "MongoDB",
+                      "Mongoose",
+                      "Git",
+                      "Github",
+                      "Bitbucket",
+                      "Jira",
+                      "Monday",
+                      "Adobe Illustrator",
+                      "Figma",
+                    ]}
+                  />
+                </Fragment>
+              ),
+            },
+            {
+              title: "Other Skills",
+              section: (
+                <Fragment>
+                  <Tags
+                    tags={[
+                      "Attentive to detail",
+                      "Organized",
+                      "Quick and eager learner",
+                      "Clear communicator",
+                      "Can work independently",
+                      "Can work in a team",
+                      "Problem solver",
+                      "Considerate of others' needs",
+                      "Driven and passionate",
+                      "Creative mind",
+                    ]}
+                  />
+                </Fragment>
+              ),
+            },
+          ]}
+        />
+      </div>
     </section>
   );
 }

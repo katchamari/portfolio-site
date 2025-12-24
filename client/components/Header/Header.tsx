@@ -4,7 +4,7 @@ import Container from "../Container/Container";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <h1>kinakomomie</h1>
+      <h1>momie</h1>
     </header>
   );
   return (

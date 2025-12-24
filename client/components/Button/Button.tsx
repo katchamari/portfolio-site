@@ -6,9 +6,7 @@ import { ComponentProps } from "@/types/ComponentProps";
 interface ButtonProps extends ComponentProps {
   disabled?: boolean;
   style?: "fill" | "outline";
-  // for outline buttons this is the border color and hover fill color
-  fillColor?: string;
-  textColor?: string;
+  color?: "green" | "orange" | "transparent";
   action?: (_e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   href?: string;
   // technically used for max-width property in css but is used to specify width in practice
@@ -17,8 +15,7 @@ interface ButtonProps extends ComponentProps {
 }
 export default function Button({
   style = "fill",
-  fillColor = "var(--accentColor)",
-  textColor,
+  color = "green",
   action = (e) => {
     return e;
   },
@@ -29,7 +26,26 @@ export default function Button({
   value = "on",
   disabled = false,
 }: ButtonProps) {
-  const padding = fillColor === "transparent" ? { padding: 0 } : {};
+  const getColor = (color: string) => {
+    switch (color) {
+      case "green":
+        return "var(--accentColor)";
+      case "orange":
+        return "var(--accentColor)";
+      default:
+        return "transparent";
+    }
+  };
+  const getBg = (color: string) => {
+    switch (color) {
+      case "green":
+        return "url(/crayonbg1.svg)";
+      default:
+        return "transparent";
+    }
+  };
+  const padding = color === "transparent" ? { padding: 0 } : {};
+
   if (href) {
     return (
       <Link
@@ -37,13 +53,16 @@ export default function Button({
         className={`${styles.button} ${styles[style]} ${className}`}
         style={{
           maxWidth: width,
-          background: fillColor,
-          borderColor: fillColor,
-          color: style === "fill" ? textColor : fillColor,
+          borderColor: getColor(color),
+          color: getColor(color),
           ...padding,
         }}
       >
-        {children}
+        <span className={styles.text}>{children}</span>
+        <span
+          className={styles.background}
+          style={{ background: getBg(color) }}
+        />
       </Link>
     );
   }
@@ -55,13 +74,17 @@ export default function Button({
       onClick={action}
       style={{
         maxWidth: width,
-        background: fillColor,
-        borderColor: fillColor,
-        color: style === "fill" ? textColor : fillColor,
+        background: getBg("/crayonbg1.svg)"),
+        borderColor: getColor(color),
+        color: getColor(color),
         ...padding,
       }}
     >
-      {children}
+      <span className={styles.text}>{children}</span>
+      <span
+        className={styles.background}
+        style={{ background: getBg(color) }}
+      />
     </button>
   );
 }

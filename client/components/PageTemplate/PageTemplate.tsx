@@ -14,9 +14,8 @@ export default function PageTemplate({ children, pageName }: Props) {
   const { isLoading } = useLoading();
   const navItems = [
     { href: "/", text: "Home", activePages: ["Home"] },
-    { href: "/about", text: "About", activePages: ["About"] },
-    { href: "/art", text: "Art", activePages: ["Art"] },
     { href: "/coding", text: "Coding", activePages: ["Coding"] },
+    { href: "/art", text: "Art", activePages: ["Art"] },
   ];
   return (
     <Fragment>

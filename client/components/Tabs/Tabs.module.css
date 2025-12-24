@@ -1,6 +1,8 @@
 .navbar {
   position: relative;
   top: 9px;
+  display: flex;
+  gap: 5%;
 }
 .navList {
   display: flex;
@@ -21,13 +23,24 @@
 .navItem {
   overflow: hidden;
   border-radius: 0 10px 0 0;
-  background: url("/bg.png");
+  background: url("/crayonbg1.svg");
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--lightColor);
   font-size: 2rem;
   font-family: var(--headingFont);
   position: relative;
+}
+.navItem select {
+  color: inherit;
+  padding: 0 !important;
+  color: inherit;
+  display: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+.navItem.mobile .navLink * {
+  border: none !important;
 }
 .navItem:not(:first-of-type) {
   border-radius: 10px 10px 0 0;
@@ -38,4 +51,18 @@
   background-repeat: no-repeat;
   color: var(--accentColor);
   z-index: 5;
+}
+.selectTab {
+  flex: 1;
+}
+.desktop {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none !important;
+  }
 }

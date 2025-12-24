@@ -24,11 +24,7 @@ export default function OtherPageTemplate({
         <title>{pageName}- momie&apos;s site</title>
       </Head>
       <Container width={width} className={styles.page}>
-        <Button
-          width="100px"
-          fillColor="transparent"
-          action={() => router.back()}
-        >
+        <Button width="100px" color="transparent" action={() => router.back()}>
           <Image
             alt="Backwards facing arrow drawn in crayon"
             src="/arrow.png"

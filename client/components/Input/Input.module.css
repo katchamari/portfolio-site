@@ -9,7 +9,8 @@
   border: 2px solid var(--accentColor);
   border-radius: 10px;
 }
-.inputContainer input {
+.inputContainer input,
+.inputContainer select {
   background: none;
   border: none;
   outline: none;

@@ -13,7 +13,8 @@ export default function CodingSectionItem({ project, viewType }: Props) {
   return (
     <article className={styles.project}>
       <div className={styles.details}>
-        <h2>{project.title}</h2>
+        <h2 className={styles.title}>{project.title}</h2>
+
         <p>{project.description}</p>
         {viewType === "preview" && (
           <Button
@@ -29,8 +30,8 @@ export default function CodingSectionItem({ project, viewType }: Props) {
       <div className={styles.thumbnail}>
         <Image
           src={project.thumbnail.src}
-          fill
-          style={{ objectFit: "cover" }}
+          width={300}
+          height={300}
           alt={project.thumbnail.alt}
         />
       </div>

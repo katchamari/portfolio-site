@@ -4,7 +4,8 @@
   gap: 15px;
 }
 .tag {
-  background: var(--accentColor2);
+  background: url("/crayonbg2.svg");
+  background-size: cover;
   color: var(--lightColor);
   padding: 5px 15px;
   border-radius: 50px;

@@ -14,7 +14,7 @@
   --errorColor: #f05c38;
   --headingFont: "CrayonEnFolieRegular";
   --bodyFont: "CrayonEnFolieRegular";
-  --accentBorder: url("/border.png") 20 / 20px round;
+  --accentBorder: url("/crayonborder1.svg") 20 / 20px round;
 }
 * {
   box-sizing: border-box;
@@ -36,6 +36,9 @@ h5,
 h6 {
   font-family: var(--headingFont);
   color: var(--accentColor);
+}
+button {
+  font-family: var(--headingFont);
 }
 h1 {
   font-size: 2rem;
@@ -62,4 +65,21 @@ img {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--accentColor);
+  border-radius: 30px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accentColor2);
+  border-radius: 30px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e6a243;
 }

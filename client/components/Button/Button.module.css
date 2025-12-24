@@ -1,6 +1,5 @@
 .button {
   border: 1px solid #000;
-  background: #000;
   color: #fff;
   border-radius: 10px;
   display: inline-block;
@@ -9,17 +8,32 @@
   text-transform: uppercase;
   font-weight: 700;
   transition: background 0.2s ease-in-out;
-  font-size: 1.25rem;
+  font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  transition: opacity 0.3s;
+}
+.text {
+  z-index: 1;
+  position: relative;
+}
 .button.outline {
   color: #000;
 }
-.button.outline:not(:hover) {
-  background: transparent !important;
+.button.outline:not(:hover) .background {
+  opacity: 0;
 }
 .button.outline:hover {
   color: #fff !important;

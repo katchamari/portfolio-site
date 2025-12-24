@@ -1,0 +1,36 @@
+.pillTabs {
+  margin-bottom: 30px;
+}
+.pillTabs .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 50px;
+  border: 2px solid var(--accentColor);
+  overflow: hidden;
+  position: relative;
+}
+.pillTabs button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 1.3rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.pillTabs button.active {
+  color: var(--lightColor);
+}
+.activeBackground {
+  height: 100%;
+  position: absolute;
+  background: url("/crayonbg1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
