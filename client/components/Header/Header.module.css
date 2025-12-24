@@ -1,0 +1,19 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.5);
+}
+.navList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.header {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--accentColor);
+  background: url("/bg2.png");
+}
+.header h1 {
+  margin: 0;
+}

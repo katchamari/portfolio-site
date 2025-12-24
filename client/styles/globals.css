@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "CrayonEnFolieRegular";
+  src:
+    url("/webFonts/CrayonEnFolieRegular/font.woff2") format("woff2"),
+    url("/webFonts/CrayonEnFolieRegular/font.woff") format("woff");
+}
+
+:root {
+  font-size: 120%;
+  --accentColor: #55c52c;
+  --accentColor2: #f2ad4d;
+  --lightColor: #f7f4eb;
+  --errorColor: #f05c38;
+  --headingFont: "CrayonEnFolieRegular";
+  --bodyFont: "CrayonEnFolieRegular";
+  --accentBorder: url("/border.png") 20 / 20px round;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("/paper-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: var(--bodyFont);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headingFont);
+  color: var(--accentColor);
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+}
+img {
+  max-width: 100%;
+}
+.global-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}

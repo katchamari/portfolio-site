@@ -1,0 +1,11 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.tag {
+  background: var(--accentColor2);
+  color: var(--lightColor);
+  padding: 5px 15px;
+  border-radius: 50px;
+}

@@ -1,0 +1,41 @@
+.navbar {
+  position: relative;
+  top: 9px;
+}
+.navList {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  gap: 10px;
+}
+.navLink {
+  text-decoration: none;
+  padding: 10px 20px 10px 25px;
+  color: inherit;
+  border-image: var(--accentBorder);
+  border-image-width: 20px 20px 0 20px;
+  display: block;
+}
+.navItem {
+  overflow: hidden;
+  border-radius: 0 10px 0 0;
+  background: url("/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--lightColor);
+  font-size: 2rem;
+  font-family: var(--headingFont);
+  position: relative;
+}
+.navItem:not(:first-of-type) {
+  border-radius: 10px 10px 0 0;
+}
+.navItem.active {
+  background: url("/bg2.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: var(--accentColor);
+  z-index: 5;
+}

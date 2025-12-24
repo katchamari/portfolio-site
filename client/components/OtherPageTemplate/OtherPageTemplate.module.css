@@ -1,0 +1,14 @@
+.card {
+  padding: 15px;
+  background: url("/bg2.png");
+  border-image: var(--accentBorder);
+  border-radius: 20px;
+  width: 100%;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 15px;
+}

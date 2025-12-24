@@ -1,0 +1,33 @@
+.project {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+.project > .details {
+  flex: 1;
+  order: 2;
+}
+.project .thumbnail {
+  flex: 0 1 280px;
+  position: relative;
+  order: 1;
+}
+.tags {
+  margin-top: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .project {
+    flex-direction: row;
+    gap: 15px;
+    max-width: 100%;
+  }
+  .project .thumbnail {
+    order: 2;
+  }
+  .project > .details {
+    order: 1;
+  }
+}

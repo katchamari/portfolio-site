@@ -14,11 +14,11 @@
     "check": "npm run lint && npm run type-check && npm run format:check",
     "clean": "rm -rf .next && rm -rf out && rm -rf node_modules/.cache",
     "analyze": "ANALYZE=true npm run build",
-    "prepare": "husky"
+    "prepare": "cd .. && husky install client/.husky"
   },
   "dependencies": {
     "dotenv-cli": "^11.0.0",
-    "framer-motion": "^12.23.26",
+    "motion": "^12.23.26",
     "next": "16.0.10",
     "react": "19.2.1",
     "react-dom": "19.2.1",
