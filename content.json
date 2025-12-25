@@ -163,7 +163,7 @@
         "src": "/coding/portfolio-site.png",
         "alt": "Screenshot of portfolio site"
       },
-      "githubLink": "dsfdsf",
+      "githubLink": "https://github.com/katchamari/portfolio-site",
       "body": [
         { "type": "heading", "content": ["Objective"] },
         {
