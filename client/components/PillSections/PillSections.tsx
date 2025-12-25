@@ -2,6 +2,7 @@ import { ComponentProps } from "@/types/ComponentProps";
 import { ReactNode, useState } from "react";
 import styles from "./PillSections.module.css";
 import { motion } from "motion/react";
+import { playClick } from "@/functions/sounds";
 
 type Section = {
   title: string;
@@ -24,7 +25,10 @@ export default function PillSections({ sections, className = "" }: Props) {
             return (
               <li key={title}>
                 <button
-                  onClick={() => setActiveSection(title)}
+                  onClick={() => {
+                    playClick();
+                    setActiveSection(title);
+                  }}
                   type="button"
                   className={classes.join(" ")}
                 >

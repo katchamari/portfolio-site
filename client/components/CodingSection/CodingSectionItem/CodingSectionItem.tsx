@@ -10,20 +10,38 @@ interface Props extends ComponentProps {
   viewType: "details" | "preview";
 }
 export default function CodingSectionItem({ project, viewType }: Props) {
+  const preview = viewType === "preview";
   return (
     <article className={styles.project}>
       <div className={styles.details}>
         <h2 className={styles.title}>{project.title}</h2>
 
         <p>{project.description}</p>
-        {viewType === "preview" && (
-          <Button
-            href={`/coding-projects/${encodeURIComponent(project.title)}`}
-            style="outline"
-          >
-            View Project
-          </Button>
-        )}
+        <div className={styles.actions}>
+          {!!(preview || project.siteLink) && (
+            <Button
+              target={preview ? "_self" : "_blank"}
+              href={
+                preview
+                  ? `/coding-projects/${encodeURIComponent(project.title)}`
+                  : project.siteLink
+              }
+              style={preview ? "outline" : "fill"}
+            >
+              {preview ? "View Project" : "See Live"}
+            </Button>
+          )}
+          {!preview && (
+            <Button
+              target="_blank"
+              color="orange"
+              href={project.githubLink}
+              style="fill"
+            >
+              View Github
+            </Button>
+          )}
+        </div>
 
         <Tags tags={project.tags} className={styles.tags} />
       </div>

@@ -6,18 +6,25 @@ import React, { useState } from "react";
 import Container from "../Container/Container";
 import Image from "next/image";
 import { Art } from "@/types/db";
+import { playClick } from "@/functions/sounds";
 interface Props extends ComponentProps {
   art: Art;
   setLoadedCount: React.Dispatch<React.SetStateAction<number>>;
 }
-export default function PortfolioItem({ art, setLoadedCount }: Props) {
+export default function PortfolioItem({
+  art,
+  setLoadedCount,
+  className = "",
+}: Props) {
   const [openArt, setOpenArt] = useState<null | string>(null);
 
   const handleOpenArt = (url: string) => {
+    playClick();
     setOpenArt(url);
   };
   const handleCloseArt = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    playClick();
     setOpenArt(null);
   };
   return (
@@ -42,7 +49,7 @@ export default function PortfolioItem({ art, setLoadedCount }: Props) {
           </Container>
         </div>
       )}
-      <article key={art.url} className={styles.item}>
+      <article key={art.url} className={`${styles.item} ${className}`}>
         <a
           className={styles.link}
           onClick={(e) => {

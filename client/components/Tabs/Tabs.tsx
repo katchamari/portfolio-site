@@ -6,6 +6,7 @@ import Input from "../Input/Input";
 import { ReactNode, useEffect, useState } from "react";
 import { FormProps } from "@/types/FormProps";
 import { useRouter } from "next/router";
+import { playClick } from "@/functions/sounds";
 type NavItem = {
   href: string;
   text: string;
@@ -17,10 +18,13 @@ interface Props extends ComponentProps {
 }
 export default function Tabs({ navItems, pageName }: Props) {
   const router = useRouter();
+  const currentHref = navItems.find(({ activePages }) =>
+    activePages.includes(pageName),
+  )?.href;
   const [tabData, setTabData] = useState<FormProps>({
     errors: [],
     submitAttempted: false,
-    activeTab: pageName,
+    activeTab: currentHref,
   });
 
   useEffect(() => {
@@ -47,7 +51,11 @@ export default function Tabs({ navItems, pageName }: Props) {
           return navItem(
             classes.join(" "),
             i,
-            <Link href={href} className={`${styles.navLink} ${styles.desktop}`}>
+            <Link
+              onClick={playClick}
+              href={href}
+              className={`${styles.navLink} ${styles.desktop}`}
+            >
               {text}
             </Link>,
           );
@@ -62,10 +70,7 @@ export default function Tabs({ navItems, pageName }: Props) {
             id="activeTab"
             required={false}
             setFormData={setTabData}
-            value={
-              navItems.find(({ activePages }) => activePages.includes(pageName))
-                ?.href
-            }
+            value={currentHref}
             formData={tabData}
             options={navItems.map(({ text, href, activePages }) => ({
               label: text,

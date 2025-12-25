@@ -1,4 +1,4 @@
-import database from "../db.json";
+import database from "../content.json";
 import type { Database } from "../types/db";
 type CollectionItemType<C extends keyof Database> = C extends "art"
   ? Database["art"][number]
@@ -12,7 +12,7 @@ export function fetchDatabase<CollectionName extends keyof Database>(
 ) {
   try {
     if (!database) return { err: "Database does not exist" };
-    const db: Database = database;
+    const db: Database = database as Database;
     const collection = db[collectionName].filter((item) => query(item));
 
     return { data: collection as CollectionItemType<CollectionName>[] };

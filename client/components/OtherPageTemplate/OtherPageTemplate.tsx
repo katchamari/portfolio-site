@@ -33,7 +33,11 @@ export default function OtherPageTemplate({
           />
         </Button>
 
-        <main className={styles.card}>{children}</main>
+        <main className={styles.card}>
+          <div className={styles.cardOuter}>
+            <div className={styles.cardInner}>{children}</div>
+          </div>
+        </main>
       </Container>
     </React.Fragment>
   );

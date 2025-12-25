@@ -1,0 +1,207 @@
+{
+  "art": [
+    {
+      "url": "/art/1frieren.png",
+      "alt": "Digital art of Frieren from the anime Frieren: Beyond Journey's End laying in a field of blue flowers"
+    },
+    {
+      "url": "/art/Illustration8.png",
+      "alt": "Digital art of characters from the videogame Hades. Depicts Zagreus walking into the Colosseum at the end of Elysium and he sees Theseus and Asterius sparkling and muscle posing as they wait for him to arrive."
+    },
+    {
+      "url": "/art/Illustration12.png",
+      "alt": "Digital art of Hatsune Miku in the outfit she wears in her Puss n' Boots figure. Her arms are flailing out and she is kicking her leg forward."
+    },
+    {
+      "url": "/art/pomni.png",
+      "alt": "Digital art of Pomni from the animated series 'Amazing Digital Circus'. She is playing Dance Dance Revolution. Parody of a page from the manga Chainsaw Man."
+    },
+    {
+      "url": "/art/Illustration4.png",
+      "alt": "Digital art of characters from the videogame Hades. Depicts Zagreus and Megaera in Zagreus's bed. Megaera is applying lipstick on Zagreus, who is smiling."
+    },
+    {
+      "url": "/art/Illustration40.png",
+      "alt": "Digital art of Laios and Kabru from the manga Dungeon Meshi. They are laying in bed together with the light reflecting on them through a window. Laios is laying on Kabru and snoring; Kabru looks annoyed."
+    },
+    {
+      "url": "/art/Comic11.png",
+      "alt": "Digital art of Marcille and Falin from the manga Dungeon Meshi. Marcille is sitting in a dress in a flowery field of grass and can be seen in the center of a golden frame propped on the ground. Falin, also wearing a dress, is leaning in for a kiss."
+    }
+  ],
+  "code": [
+    {
+      "title": "Birthday discord bot",
+      "siteLink": "https://discord.com/oauth2/authorize?client_id=1435100464348663890",
+      "thumbnail": {
+        "src": "/coding/discord.png",
+        "alt": "Discord app logo"
+      },
+      "githubLink": "https://github.com/katchamari/discord-markiplier-birthday-bot",
+      "body": [
+        {
+          "type": "heading",
+          "content": ["Objective"]
+        },
+        {
+          "type": "text",
+          "content": [
+            "I started working on this project for fun because one of my friends couldn't find an existing bot that she liked. The main goal was to have a bot where you could save the birthdays of people in the server with a slash command. When the day hits, the bot sends out a message letting everyone know it's that person's birthday. The birthday person also gets a special birthday role."
+          ]
+        },
+        {
+          "type": "heading",
+          "content": ["Core features"]
+        },
+        {
+          "type": "list",
+          "content": [
+            "NodeJS server with discord.js and mongoose installed",
+            "Discord bot created through the developer portal, with permissions to use slash commands, manage roles, and send messages",
+            "Ability for someone to configure the bot settings to follow appropriate timezone, set birthday role, and set channel that messages should be sent to ",
+            "File based slash command integration",
+            "MongoDB database to store user birthdays and server specific bot settings",
+            "Cron job to check if anyone's birthday is today, send birthday message, if applicable, and add role. Additionally, remove roles when it's no longer person's birthday",
+            "Along with the ability to set new birthdays, we also need to be able to delete birthdays and list birthdays"
+          ]
+        },
+        {
+          "type": "heading",
+          "content": ["Packages used"]
+        },
+        {
+          "type": "list",
+          "content": ["dayjs", "discord.js", "dotenv", "mongoose", "node-cron"]
+        }
+      ],
+      "description": "Discord.js bot that sends out messages on the birthdays of server members. User birthdays as well as server timezone can be set via slash commands, and are stored in a MongoDB database that gets queried during a cron job.",
+      "tags": [
+        "NodeJS",
+        "JavaScript",
+        "Discord.js",
+        "Bot",
+        "MongoDB",
+        "Cron job",
+        "Back end",
+        "Services"
+      ]
+    },
+    {
+      "title": "Color guessing game",
+      "siteLink": "https://katchamari.github.io/color-picker-game/",
+      "thumbnail": {
+        "src": "/coding/color-game.png",
+        "alt": "Screenshot of color picker game"
+      },
+      "githubLink": "https://github.com/katchamari/color-picker-game",
+      "body": [
+        { "type": "heading", "content": ["Objective"] },
+        {
+          "type": "text",
+          "content": [
+            "I really wanted to create a fun little front end game that utilizes my JavaScript skills. This HTML page allows you to play a color guessing game where you need to correspond the correct color to the given hexadecimal value."
+          ]
+        },
+        {
+          "type": "heading",
+          "content": ["Basic necessities"]
+        },
+        {
+          "type": "list",
+          "content": [
+            "HTML, CSS, and JavaScript files",
+            "Favicon",
+            "Sound Effects"
+          ]
+        },
+        {
+          "type": "heading",
+          "content": ["Functions needed"]
+        },
+        {
+          "type": "list",
+          "content": [
+            "Generate random hexadecimal digit",
+            "Generate full 6 digit hexadecimal value",
+            "Generate given number of hexadecimal values",
+            "Set one option as the correct answer",
+            "Create colored square",
+            "Create grid of given squares",
+            "Start new game",
+            "User guess",
+            "Revealing answers",
+            "Show victory screen",
+            "Show losing screen",
+            "Show 'Play again' prompt"
+          ]
+        },
+        {
+          "type": "image",
+          "content": [
+            "/coding/color-game/1.png",
+            "/coding/color-game/2.png",
+            "/coding/color-game/3.png",
+            "/coding/color-game/4.png",
+            "/coding/color-game/5.png"
+          ]
+        }
+      ],
+      "description": "Web game where the player is given a hexadecimal color code and then has to guess which of the given colors it corresponds to. Includes instructions on how to read hex colors, and calming sound effects.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Modals",
+        "Audio",
+        "Front end",
+        "Responsive"
+      ]
+    },
+    {
+      "title": "Portfolio site",
+      "thumbnail": {
+        "src": "/coding/portfolio-site.png",
+        "alt": "Screenshot of portfolio site"
+      },
+      "githubLink": "dsfdsf",
+      "body": [
+        { "type": "heading", "content": ["Objective"] },
+        {
+          "type": "text",
+          "content": [
+            "I needed a website to showcase my programming and digital art portfolios. I really wanted to use NextJS with seamless page transitions."
+          ]
+        },
+        {
+          "type": "heading",
+          "content": ["Core features"]
+        },
+        {
+          "type": "list",
+          "content": [
+            "NextJS site done with TypeScript",
+            "Tabular navigation with NextJS routing",
+            "Page transitions and animations with Motion.js",
+            "All module css, no Tailwind",
+            "Display coding projects in a list, each with links to their own pages of content and media and tags",
+            "Display art pieces in grid, each popping up a larger image when clicking",
+            "Show skills, qualifications, bio, and provide download to resume"
+          ]
+        }
+      ],
+      "description": "My portfolio site. The one you're currently viewing! Done from scratch using NextJS and CSS modules.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "ReactJS",
+        "NextJS",
+        "Animations",
+        "Page Transitions",
+        "Motion.js",
+        "Front end",
+        "Responsive"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,10 @@ export type Art = {
   url: string;
   alt: string;
 };
+export type CodeBodyItem = {
+  type: "heading" | "text" | "code" | "list" | "image";
+  content: string[];
+};
 export type Code = {
   githubLink: string;
   siteLink?: string;
@@ -10,7 +14,7 @@ export type Code = {
     alt: string;
   };
   title: string;
-  body: string;
+  body: CodeBodyItem[];
   description: string;
   tags?: string[];
 };

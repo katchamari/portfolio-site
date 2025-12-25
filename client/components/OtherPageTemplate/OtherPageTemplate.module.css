@@ -1,14 +1,31 @@
 .card {
-  padding: 15px;
   background: url("/bg2.png");
   border-image: var(--accentBorder);
   border-radius: 20px;
   width: 100%;
+  flex: 1;
+  position: relative;
+  padding: 15px;
+  overflow: hidden;
+}
+.cardOuter {
+  height: 100%;
+  position: relative;
+}
+.cardInner {
+  height: 100%;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 15px;
 }
 .page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding: 50px 15px;
+  padding: 15px;
+  height: 100%;
 }

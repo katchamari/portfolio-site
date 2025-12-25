@@ -3,6 +3,7 @@ import styles from "./Button.module.css";
 import React from "react";
 import Link from "next/link";
 import { ComponentProps } from "@/types/ComponentProps";
+import { playClick } from "@/functions/sounds";
 interface ButtonProps extends ComponentProps {
   disabled?: boolean;
   style?: "fill" | "outline";
@@ -11,6 +12,7 @@ interface ButtonProps extends ComponentProps {
   href?: string;
   // technically used for max-width property in css but is used to specify width in practice
   width?: string;
+  target?: "_self" | "_blank";
   value?: string;
 }
 export default function Button({
@@ -24,6 +26,7 @@ export default function Button({
   children,
   width = "fit-content",
   value = "on",
+  target = "_self",
   disabled = false,
 }: ButtonProps) {
   const getColor = (color: string) => {
@@ -31,7 +34,7 @@ export default function Button({
       case "green":
         return "var(--accentColor)";
       case "orange":
-        return "var(--accentColor)";
+        return "var(--accentColor2)";
       default:
         return "transparent";
     }
@@ -40,6 +43,8 @@ export default function Button({
     switch (color) {
       case "green":
         return "url(/crayonbg1.svg)";
+      case "orange":
+        return "url(/crayonbg2.svg)";
       default:
         return "transparent";
     }
@@ -49,6 +54,8 @@ export default function Button({
   if (href) {
     return (
       <Link
+        onClick={playClick}
+        target={target}
         href={href}
         className={`${styles.button} ${styles[style]} ${className}`}
         style={{
@@ -71,7 +78,10 @@ export default function Button({
       disabled={disabled}
       value={value}
       className={`${styles.button} ${styles[style]} ${className}`}
-      onClick={action}
+      onClick={(e) => {
+        playClick();
+        action(e);
+      }}
       style={{
         maxWidth: width,
         background: getBg("/crayonbg1.svg)"),
