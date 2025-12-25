@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "dotenv -c -- next dev",
     "build": "dotenv -c -- next build",
-    "start": "dotenv -c -- next start",
+    "start": "next start -p $PORT",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write .",
