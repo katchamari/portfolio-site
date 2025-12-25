@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "dotenv -c -- next dev",
-    "build": "dotenv -c -- next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start -p $PORT",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
@@ -17,7 +17,6 @@
     "prepare": "husky .husky"
   },
   "dependencies": {
-    "dotenv-cli": "^11.0.0",
     "motion": "^12.23.26",
     "next": "16.0.10",
     "react": "19.2.1",
