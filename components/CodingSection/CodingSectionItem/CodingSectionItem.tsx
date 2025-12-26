@@ -31,7 +31,7 @@ export default function CodingSectionItem({ project, viewType }: Props) {
               {preview ? "View Project" : "See Live"}
             </Button>
           )}
-          {!preview && (
+          {!!(!preview && project.githubLink) && (
             <Button
               target="_blank"
               color="orange"
