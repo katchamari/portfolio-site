@@ -17,10 +17,8 @@ export default function AboutSection() {
         I&apos;m Momo, but you can also call me Momie! (he/they) I&apos;m a web
         developer and artist based in California. I&apos;m a full stack
         developer with a passion and strength for front end. In my most recent
-        position, I worked full time as a senior full stack developer, but was
-        forced to resign after my employer failed to pay their employees for
-        over two months. I am looking for freelance work while I hunt for a more
-        permanent position.
+        position, I worked full time as a senior full stack developer. I am
+        looking for freelance work while I hunt for a more permanent position.
       </p>
 
       <h2>My qualifications</h2>
