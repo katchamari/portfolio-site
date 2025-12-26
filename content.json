@@ -202,6 +202,125 @@
         "Front end",
         "Responsive"
       ]
+    },
+    {
+      "title": "2Leaf Business Site",
+      "thumbnail": {
+        "src": "/coding/2leaf.png",
+        "alt": "Screenshot of 2Leaf site"
+      },
+      "siteLink": "https://2leaf.com",
+      "body": [
+        { "type": "heading", "content": ["Objective"] },
+        {
+          "type": "text",
+          "content": [
+            "During my employment with 2Leaf Web Development, I was tasked to develop the new design for the company website. The site should be fully responsive and display the business's members,  services, and portfolio items."
+          ]
+        },
+        {
+          "type": "heading",
+          "content": ["Core features"]
+        },
+        {
+          "type": "list",
+          "content": [
+            "Home, Portfolio, About, Services, and Contact pages",
+            "Display photos of team members in slideshow",
+            "Showcase all portfolio items, each with individual pages",
+            "Advertise services and plans",
+            "Display contact information and contact form handled with PHP",
+            "List open positions for employment with PHP application form"
+          ]
+        },
+        {
+          "type": "image",
+          "content": [
+            "/coding/2leaf/1.png",
+            "/coding/2leaf/2.png",
+            "/coding/2leaf/3.png",
+            "/coding/2leaf/4.png",
+            "/coding/2leaf/5.png",
+            "/coding/2leaf/6.png"
+          ]
+        }
+      ],
+      "description": "Business website for 2Leaf Web Development done in HTML, CSS, JavaScript, Bootstrap, and PHP",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "Bootstrap",
+        "PHP",
+        "Responsive",
+        "Sliders"
+      ]
+    },
+    {
+      "title": "The Aquaya Institute",
+      "thumbnail": {
+        "src": "/coding/aquaya/1.png",
+        "alt": "Screenshot of Aquaya.org site"
+      },
+      "siteLink": "https://aquaya.org",
+      "body": [
+        { "type": "heading", "content": ["Objective"] },
+        {
+          "type": "text",
+          "content": [
+            "During my employment with 2Leaf Web Development, I was tasked to develop the new website for a non-profit called The Aquaya Institute, from designs given to us by the client. The site needed to be integrated with Wordpress and a working blog, and have several specific animations. Coded with HTML, CSS, JavaScript/jQuery, Bootstrap, and PHP for Wordpress integration."
+          ]
+        },
+        {
+          "type": "heading",
+          "content": ["Core features"]
+        },
+        {
+          "type": "list",
+          "content": [
+            "Home, several various organization pages, about page, page about a specific project called Project W, and contact page",
+            "Several animations across all pages, along with each section fading in on scroll",
+            "Fully responsive to all screen sizes",
+            "Custom blog page handled with Wordpress custom post types, different categories, and a search",
+            "Contact and newsletter signup forms custom coded and then and handled through Wordpress",
+            "Home page previewing the most recent posts, animated statistics, and featured collaborators"
+          ]
+        },
+        {
+          "type": "image",
+          "content": [
+            "/coding/aquaya/1.png",
+            "/coding/aquaya/2.png",
+            "/coding/aquaya/3.png",
+            "/coding/aquaya/4.png",
+            "/coding/aquaya/5.png",
+            "/coding/aquaya/6.png",
+            "/coding/aquaya/7.png",
+            "/coding/aquaya/8.png",
+            "/coding/aquaya/9.png",
+            "/coding/aquaya/10.png",
+            "/coding/aquaya/11.png",
+            "/coding/aquaya/12.png",
+            "/coding/aquaya/13.png"
+          ]
+        }
+      ],
+      "description": "Wordpress site for non-profit that works in researching and delivering insights and tools regarding universal access to clean and safe water.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "Bootstrap",
+        "PHP",
+        "Wordpress",
+        "Newsletter",
+        "Forms",
+        "Animations",
+        "Sliders",
+        "Blog"
+      ]
     }
   ]
 }

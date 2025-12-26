@@ -2,8 +2,7 @@
   margin-bottom: 30px;
 }
 .pillTabs .list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -12,12 +11,15 @@
   overflow: hidden;
   position: relative;
 }
+.pillTabs .list li {
+  flex: 1;
+}
 .pillTabs button {
+  font-size: 1.1rem;
   background: none;
   border: none;
   outline: none;
   box-shadow: none;
-  font-size: 1.3rem;
   padding: 10px 15px;
   cursor: pointer;
   width: 100%;
@@ -33,4 +35,9 @@
   background: url("/crayonbg1.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media only screen and (min-width: 768px) {
+  .pillTabs button {
+    font-size: 1.3rem;
+  }
 }
