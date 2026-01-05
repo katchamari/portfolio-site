@@ -329,6 +329,59 @@
         "Sliders",
         "Blog"
       ]
+    },
+    {
+      "title": "Momo's Components",
+      "thumbnail": {
+        "src": "/coding/momos-components/1.png",
+        "alt": "Screenshot of Momo's component site"
+      },
+      "siteLink": "https://katchamari.github.io/momos-components",
+      "body": [
+        { "type": "heading", "content": ["Objective"] },
+        {
+          "type": "text",
+          "content": [
+            "I wanted to make a site that showcases different kinds of frontend components and displays how I coded them, focusing on keeping most of the work on CSS and using minimal JavaScript. I will keep updating this site with new components. Another part of the codebase that isn't used on the site is a NodeJS script that goes through my components folder and creates a JSON file for me to grab from to generate everything on the frontend, since I didn't feel the need to run a server on a front-end project."
+          ]
+        },
+        {
+          "type": "heading",
+          "content": ["Code Stack"]
+        },
+        {
+          "type": "list",
+          "content": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Prism.js (for syntax highlighting the code blocks)",
+            "NodeJS (For generating JSON file to fetch on front-end)",
+            "Husky and Nodemon (for regenerating and replacing the JSON file before every commit and on save)"
+          ]
+        },
+        {
+          "type": "image",
+          "content": [
+            "/coding/momos-components/1.png",
+            "/coding/momos-components/2.png",
+            "/coding/momos-components/3.png",
+            "/coding/momos-components/4.png",
+            "/coding/momos-components/5.png"
+          ]
+        }
+      ],
+      "description": "Site that displays fully responsive front-end components I created along with their source code. Keeps a focus on using minimal JavaScript and all animations are handled with CSS.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "CSS Animations",
+        "CSS Grid",
+        "Flexbox",
+        "Responsive",
+        "NodeJS script"
+      ]
     }
   ]
 }
