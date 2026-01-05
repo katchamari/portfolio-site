@@ -13,6 +13,7 @@ export default function PortfolioSection() {
       const response = fetchDatabase("art");
       const data = response.data;
       if (!data || !data.length) return;
+      data.reverse();
       setArtworks(data);
     }
     fetchItems();
@@ -23,7 +24,6 @@ export default function PortfolioSection() {
   }, [loadedCount, artworks, setIsLoading]);
 
   if (!artworks.length) return <p>No items found.</p>;
-
   return (
     <section className={styles.items}>
       {artworks.map((art) => (
